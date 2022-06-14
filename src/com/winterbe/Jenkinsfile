@@ -1,0 +1,8 @@
+node ('JDK11') {
+    stages('scm'){
+        git branch:'master', url:'https://github.com/DurgaKd/java8-tutorial.git'
+    }
+    stages('build'){
+        sh 'mvn package'
+    }
+}
